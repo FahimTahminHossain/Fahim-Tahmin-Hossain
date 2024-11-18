@@ -3,122 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Welcome</title>
     <style>
-        /* Existing and new styles merged */
+        /* Basic styling for body and other elements */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4; 
         }
 
-        /* Pop-up container styles */
         .popup {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); 
+            background: rgba(0, 0, 0, 0.6); /* Transparent background */
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s, opacity 0.5s ease;
         }
 
         .popup-content {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            padding: 40px;
+            background-color: white;
+            padding: 30px;
             text-align: center;
-            border-radius: 15px;
-            width: 350px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            color: white;
-            transform: scale(1);
-            animation: popupAnimation 1s ease-in-out;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .popup-image {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            margin-bottom: 20px;
-            border: 3px solid #fff; 
-        }
-
-        h2 {
-            font-size: 24px;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 16px;
-            margin: 20px 0;
-            font-style: italic;
+            margin-bottom: 15px;
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Green */
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s ease;
         }
 
         button:hover {
             background-color: #45a049;
         }
 
-        @keyframes popupAnimation {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
         #website-content {
             text-align: center;
             padding: 50px;
-            display: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Pop-up content -->
+    <!-- Pop-up container -->
     <div id="popup" class="popup">
         <div class="popup-content">
-            <img src="images/your-profile-picture.jpg" alt="Profile Picture" class="popup-image">
+            <!-- Your profile picture -->
+            <img src="your-profile-picture.jpg" alt="Profile Picture" class="popup-image">
             <h2>Welcome to My Website!</h2>
-            <p>Click "Continue" to explore more.</p>
+            <p>Click "Continue" to view my website.</p>
             <button id="continue-btn">Continue</button>
         </div>
     </div>
 
-    <!-- Main content (hidden initially) -->
-    <div id="website-content">
+    <!-- Your website content goes here -->
+    <div id="website-content" style="display: none;">
+        <!-- Add your website content here (like the header, main sections, etc.) -->
         <h1>Welcome to my website!</h1>
-        <p>Here's all about me...</p>
+        <p>Here’s all about me...</p>
     </div>
 
     <script>
-        // JavaScript to hide the pop-up and show the website content
+        // JavaScript to hide the pop-up and show the website content when "Continue" is clicked
         document.getElementById("continue-btn").onclick = function() {
+            // Hide the pop-up
             document.getElementById("popup").style.visibility = "hidden";
             document.getElementById("popup").style.opacity = "0";
+
+            // Show the website content
             document.getElementById("website-content").style.display = "block";
         };
     </script>
 
+</body>
+</html>
 </body>
 </html>
 <!DOCTYPE html>
