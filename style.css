@@ -1,115 +1,103 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
     line-height: 1.6;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-    background: url('nyc-banner.jpg') no-repeat center center/cover; /* Replace with NYC banner image */
-    color: #FFFFFF;
+    background: url('fordham-university.jpg') no-repeat center center/cover; /* Add Fordham University image */
+    color: white; /* Make text white for contrast */
     text-align: center;
-    padding: 4rem 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    margin: 10px 0 0;
 }
 
-/* Navigation styles */
+/* Navigation */
 nav ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 0;
-    background-color: #A7A9AC;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    display: inline;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #FFFFFF;
     font-weight: bold;
-    padding: 1rem;
-    display: block;
-    transition: color 0.3s, background-color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #860038;
-    background-color: #C5B783;
-    border-radius: 5px;
-}
-
-/* Main content styles */
+/* Main Content */
 main {
-    padding: 2rem 10%;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
 }
 
 section {
-    margin-bottom: 3rem;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
 }
 
-section h2 {
-    color: #860038;
-    border-bottom: 2px solid #C5B783;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+h2 {
+    color: #800000; /* Fordham maroon color */
+    border-bottom: 2px solid #800000;
+    padding-bottom: 5px;
 }
 
-/* Profile picture */
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 1rem auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ul {
+    padding-left: 20px;
 }
 
-/* Image grid */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+a.button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: #800000; /* Fordham maroon */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.image-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+a.button:hover {
+    background: #660000; /* Darker maroon for hover effect */
 }
 
-/* Footer styles */
+/* Footer */
 footer {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #860038;
-    color: #FFFFFF;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    padding: 10px 0;
+    background: #800000; /* Footer background maroon */
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
