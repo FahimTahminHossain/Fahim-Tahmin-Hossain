@@ -1,202 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <style>
-        /* Basic styling for body and other elements */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Transparent background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            visibility: visible;
-            opacity: 1;
-            transition: visibility 0s, opacity 0.5s ease;
-        }
-
-        .popup-content {
-            background-color: white;
-            padding: 30px;
-            text-align: center;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .popup-image {<img src="assets/images/profile.jpg" alt="Profile Picture" class="popup-image"}
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        button {
-            background-color: #4CAF50; /* Green */
-            color: maroon;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #website-content {
-            text-align: center;
-            padding: 50px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal website of Fahim Tahmin Hossain: Honors Scholar, Fordham Gabelli School of Business, Accounting Information Systems Junior.">
+  <meta name="keywords" content="Fordham, Honors Scholar, Gabelli School of Business, Accounting Information Systems, New York">
+  <meta name="author" content="Fahim Tahmin Hossain">
+  <title>Fahim Tahmin Hossain</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
 
-    <!-- Pop-up container -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <!-- Your profile picture -->
-            <img src="assets/images/profile.jpg" alt="Profile Picture" class="popup-image">
-            <h2>Welcome to My Website!</h2>
-            <p>Click "Continue" to view my website.</p>
-            <button id="continue-btn">Continue</button>
-        </div>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Pop-up -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
+      <img src="assets/images/profile.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4">
+      <h2 class="text-xl font-semibold">Welcome to My Website!</h2>
+      <p class="mt-2 text-sm text-gray-600">Click \"Continue\" to view my website.</p>
+      <button id="continue-btn" class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Continue</button>
     </div>
+  </div>
 
-    <!-- Your website content goes here -->
-    <div id="website-content" style="display: none;">
-        <!-- Add your website content here (like the header, main sections, etc.) -->
-        <h1>Welcome to my website!</h1>
-        <p>Here’s all about me...</p>
-    </div>
-
-    <script>
-        // JavaScript to hide the pop-up and show the website content when "Continue" is clicked
-        document.getElementById("continue-btn").onclick = function() {
-            // Hide the pop-up
-            document.getElementById("popup").style.visibility = "hidden";
-            document.getElementById("popup").style.opacity = "0";
-
-            // Show the website content
-            document.getElementById("website-content").style.display = "block";
-        };
-    </script>
-</body>
-</html>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Fahim Tahmin Hossain: Ignite Honors Scholar, Fordham Gabelli School of Business, Information Systems Sophomore.">
-    <meta name="keywords" content="Fordham, Ignite Scholar, Gabelli School of Business, Information Systems, New York">
-    <meta name="author" content="Fahim Tahmin Hossain">
-    <title>Fahim Tahmin Hossain</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Fahim Tahmin Hossain</h1>
-        <p>Ignite Honors Scholar | Fordham Gabelli School of Business | Information Systems | Sophomore</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- Main Content -->
+  <div id="website-content" class="hidden">
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center py-8 shadow-md">
+      <h1 class="text-4xl font-bold">Fahim Tahmin Hossain</h1>
+      <p class="mt-2 text-lg">Honors Scholar | Fordham Gabelli School of Business | Accounting Information Systems | Junior</p>
+      <nav class="mt-4">
+        <ul class="flex justify-center space-x-6 text-white font-semibold">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#experience" class="hover:underline">Experience</a></li>
+          <li><a href="#resume" class="hover:underline">Resume</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my personal website! I am a sophomore at Fordham University's Gabelli School of Business, majoring in Information Systems. As an Ignite Honors Scholar, I am passionate about innovation, technology, and creating impactful solutions. Explore my experiences and get to know more about my journey!</p>
-        </section>
-        
-        <section id="experience">
-            <h2>Experience</h2>
-            <div>
-                <h3>Aflac New York – Metro/Long Island</h3>
-                <p><strong>Regional Intern</strong> | June 2024 – August 2024</p>
-                <ul>
-                    <li>Assisted multiple divisions, including field marketing, financial planning, human resources, and marketing strategy development.</li>
-                    <li>Developed social media-based marketing and recruiting campaigns.</li>
-                    <li>Gave presentations to business owners explaining Aflac's offerings.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Fordham University</h3>
-                <p><strong>Summer Leadership Academy Counselor</strong> | June 2024 – August 2024</p>
-                <ul>
-                    <li>Guided high school students in a pre-college program and facilitated activities.</li>
-                    <li>Supported the Assistant Director and Resident Director in program operations.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>United Student Government, Fordham University</h3>
-                <p><strong>Member, Committee on International Integration</strong> | February 2024 – Present</p>
-                <ul>
-                    <li>Facilitated resources for international students and organized events to encourage interaction between domestic and international students.</li>
-                    <li>Collaborated with campus departments to develop inclusive programming and solutions to difficulties faced by international students.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Jonas Bronck Academy, Bronx, New York</h3>
-                <p><strong>Fordham LPP Volunteer Tutor</strong> | September 2023 – December 2023</p>
-                <ul>
-                    <li>Tailored lessons to enhance problem-solving skills and build relationships with students.</li>
-                    <li>Facilitated communication between students and tutors, collaborating with program coordinators.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Fordham IT Team, Public Safety</h3>
-                <p><strong>Student Worker</strong> | January 2024 – Present</p>
-                <ul>
-                    <li>Helped students connect to the network on devices, resolved technical issues, and assisted with Multi-Factor Authentication (MFA).</li>
-                    <li>Educated students about available technology resources at Fordham University.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Jagroto, Non-Profit Organization, Dhaka, Bangladesh</h3>
-                <p><strong>CEO & Founder</strong> | July 2021 – Present</p>
-                <ul>
-                    <li>Supervised campaigns and coordinated fieldwork to aid underprivileged families with food, clothing, and essentials.</li>
-                    <li>Raised funds to support initiatives benefiting thousands of families.</li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>You can view or download my resume below:</p>
-            <a href="resume.pdf" class="button" download>Download Resume</a>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me via email or LinkedIn!</p>
-            <p>Email: <a href="mailto:fhossain16@fordham.edu">fhossain16@fordham.edu</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/fahim-tahmin-hossain/" target="_blank">Fahim Tahmin Hossain</a></p>
-        </section>
+    <main class="max-w-4xl mx-auto px-4 py-10">
+      <section id="about" class="mb-16">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-2">About Me</h2>
+        <p class="text-gray-700">I am a junior at Fordham University's Gabelli School of Business, majoring in Accounting Information Systems. As an Honors Scholar, I am passionate about innovation, technology, and creating impactful solutions. Explore my experiences and get to know more about my journey!</p>
+      </section>
+
+      <section id="experience" class="mb-16">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-4">Experience</h2>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">Digital Risk Consultant @ EY</h3>
+          <p class="text-sm text-gray-500">June 2025 – Present | New York, NY</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Implemented a centralized cloud risk framework for a large financial institution</li>
+            <li>Developed contingency plans for critical vendor services</li>
+            <li>Collaborated on IT policy enhancements and control improvements</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">Resident Assistant @ Fordham University</h3>
+          <p class="text-sm text-gray-500">December 2024 – Present</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Managed conflict resolution and emergency response</li>
+            <li>Planned and executed community events to enhance student engagement</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">IT Assistant @ Fordham IT Team</h3>
+          <p class="text-sm text-gray-500">August 2024 – September 2024</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Provided tech support for over 90 students during move-in</li>
+            <li>Reduced eID and MFA issues by 30%</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">Regional Intern @ Aflac</h3>
+          <p class="text-sm text-gray-500">June – August 2024 | New York, NY</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Analyzed financial reports and identified trends</li>
+            <li>Assessed business needs and optimized employee benefit strategies</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">Committee Member @ United Student Government</h3>
+          <p class="text-sm text-gray-500">February 2024 – Present</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Proposed solutions to enhance international student experience</li>
+            <li>Collaborated with university staff and organized student events</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">Corporate Partnership Liaison @ Fordham Entrepreneurship Society</h3>
+          <p class="text-sm text-gray-500">January 2025 – Present</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Negotiated corporate workshops and managed partnerships</li>
+            <li>Tracked engagement metrics and coordinated event planning</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-lg">Founder @ Jagroto (Non-Profit)</h3>
+          <p class="text-sm text-gray-500">September 2020 – Present | Dhaka, Bangladesh</p>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Led disaster relief efforts supporting underprivileged families</li>
+            <li>Organized fundraising and volunteer campaigns</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="resume" class="mb-16">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-2">Resume</h2>
+        <p>You can view or download my resume below:</p>
+        <a href="resume.pdf" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download Resume</a>
+      </section>
+
+      <section id="contact">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-2">Contact</h2>
+        <p>Email: <a href="mailto:fhossain16@fordham.edu" class="text-blue-700 hover:underline">fhossain16@fordham.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/fahim-tahmin-hossain/" target="_blank" class="text-blue-700 hover:underline">Fahim Tahmin Hossain</a></p>
+      </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Fahim Tahmin Hossain. All rights reserved.</p>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+      <p>&copy; 2025 Fahim Tahmin Hossain. All rights reserved.</p>
     </footer>
+  </div>
+
+  <script>
+    document.getElementById("continue-btn").onclick = function () {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("website-content").classList.remove("hidden");
+    };
+  </script>
 </body>
 </html>
