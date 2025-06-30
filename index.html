@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Fahim Tahmin Hossain – Junior, Accounting Information Systems, Fordham Gabelli School of Business" />
-  <meta name="keywords" content="Fahim Hossain, Fordham, Accounting Information Systems, EY, Digital Risk" />
+  <meta name="description" content="Portfolio of Fahim Tahmin Hossain – Junior Accounting Information Systems major, Fordham Gabelli School of Business" />
   <meta name="author" content="Fahim Tahmin Hossain" />
   <title>Fahim Tahmin Hossain</title>
 
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <!-- AOS (Animate on Scroll) for motion effects -->
+  <!-- Tailwind CSS v3 (with arbitrary values & dark mode utilities) -->
+  <script src="https://cdn.tailwindcss.com/3.4.4"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          animation: {
+            'slow-bounce': 'bounce 2.5s infinite',
+          },
+        },
+      },
+    }
+  </script>
+  <!-- AOS for scroll animations -->
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-
   <style>
-    /* Gradient text helper */
+    /* Gradient‑text helper */
     .gradient-title {
-      background: linear-gradient(90deg, #7c3aed 0%, #3b82f6 100%);
+      background: linear-gradient(90deg, #c084fc 0%, #60a5fa 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -25,128 +34,126 @@
   </style>
 </head>
 
-<body class="scroll-smooth bg-gray-950 text-gray-100 font-sans">
-  <!-- =============================== HEADER / HERO =============================== -->
-  <header class="relative overflow-hidden">
-    <!-- Subtle AI‑style looping video (replace with a local mp4 if preferred) -->
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
-      <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4" />
+<body class="dark bg-gray-950 text-gray-100 font-sans scroll-smooth">
+  <!-- ───────────────────────── HEADER / HERO ───────────────────────── -->
+  <header class="relative overflow-hidden h-[75vh] flex items-center justify-center">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="https://storage.googleapis.com/coverr-main/mp4/Lunar_Rainbows.mp4" type="video/mp4" />
     </video>
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-black/70"></div>
 
-    <div class="relative z-10 flex flex-col items-center text-center py-24 px-4">
-      <!-- LinkedIn profile picture → save yours to assets/images/profile.jpg and it will render -->
-      <img src="assets/images/profile.jpg" alt="Fahim Tahmin Hossain" class="w-40 h-40 rounded-full ring-4 ring-purple-500 shadow-xl mb-6" data-aos="zoom-in" />
+    <!-- Content -->
+    <div class="relative z-10 text-center px-4" data-aos="zoom-in">
+      <!-- Profile photo with fallback -->
+      <img src="assets/images/profile.jpg" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/9919?s=200&v=4'" alt="Fahim Tahmin Hossain" class="w-40 h-40 rounded-full ring-4 ring-purple-500 shadow-xl mx-auto mb-6 animate-slow-bounce" />
 
-      <h1 class="gradient-title text-5xl font-extrabold mb-3" data-aos="fade-up">Fahim Tahmin Hossain</h1>
-      <p class="text-xl text-gray-300" data-aos="fade-up" data-aos-delay="100">Honors Scholar · Junior · Accounting Information Systems · Fordham Gabelli School of Business</p>
+      <h1 class="gradient-title text-5xl md:text-6xl font-extrabold mb-4">Fahim Tahmin Hossain</h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto">Honors Scholar · Junior · Accounting Information Systems · Fordham Gabelli School of Business</p>
 
       <!-- Navigation -->
-      <nav class="mt-6" data-aos="fade-up" data-aos-delay="200">
-        <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-medium text-gray-200">
-          <li><a href="#about" class="hover:text-purple-400">About</a></li>
-          <li><a href="#experience" class="hover:text-purple-400">Experience</a></li>
-          <li><a href="#resume" class="hover:text-purple-400">Resume</a></li>
-          <li><a href="#contact" class="hover:text-purple-400">Contact</a></li>
+      <nav class="mt-8">
+        <ul class="flex flex-wrap justify-center gap-x-8 gap-y-4 font-medium">
+          <li><a href="#about" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="100">About</a></li>
+          <li><a href="#experience" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="150">Experience</a></li>
+          <li><a href="#resume" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="200">Resume</a></li>
+          <li><a href="#contact" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="250">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- =============================== MAIN =============================== -->
-  <main class="max-w-5xl mx-auto px-6 py-20 space-y-24">
-    <!-- ---------- About ---------- -->
+  <!-- ───────────────────────── MAIN CONTENT ───────────────────────── -->
+  <main class="max-w-5xl mx-auto px-6 py-24 space-y-28">
+    <!-- About Section -->
     <section id="about" data-aos="fade-up">
-      <h2 class="gradient-title text-3xl font-bold mb-4">About Me</h2>
-      <p class="leading-relaxed text-gray-300">
-        I’m a junior at Fordham University’s Gabelli School of Business majoring in <span class="font-semibold text-purple-400">Accounting Information Systems</span>.
-        My passion lies at the intersection of technology, risk, and impactful problem‑solving. Currently, I’m a Digital Risk
-        Consultant at EY, where I help financial institutions strengthen cloud governance and controls. When I’m not diving into
-        data or compliance frameworks, you’ll find me mentoring peers, managing community events as a Resident Assistant, or
-        leading <em>Jagroto</em>—my non‑profit supporting families in Bangladesh.
-      </p>
-      <img src="https://images.unsplash.com/photo-1581091870900-b5ccb8367f59?auto=format&fit=crop&w=1200&q=60" alt="Abstract code art" class="mt-8 rounded-lg shadow-lg" />
+      <h2 class="gradient-title text-3xl font-bold mb-6">About Me</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <p class="leading-relaxed text-gray-300">
+          I'm a junior at Fordham University's Gabelli School of Business majoring in <span class="font-semibold text-purple-400">Accounting Information Systems</span>.
+          My passion lies at the intersection of technology, risk, and impactful problem‑solving. Currently, I'm a Digital Risk Consultant at EY,
+          helping financial institutions strengthen cloud governance and controls. When I'm not diving into data, you'll find me mentoring peers as a Resident Assistant or
+          leading <em>Jagroto</em>—my non‑profit supporting families across Bangladesh.
+        </p>
+        <!-- Decorative GIF (AI abstract art) -->
+        <img src="https://media.giphy.com/media/Y4pAQv58ETJgRwoLxj/giphy.gif" alt="AI abstract art" class="rounded-lg shadow-lg" />
+      </div>
     </section>
 
-    <!-- ---------- Experience ---------- -->
+    <!-- Experience Section -->
     <section id="experience" data-aos="fade-up">
-      <h2 class="gradient-title text-3xl font-bold mb-8">Experience</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- EY -->
-        <div class="bg-gradient-to-br from-indigo-800 to-purple-700 p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition">
+      <h2 class="gradient-title text-3xl font-bold mb-10">Experience</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Card template → darker gradients for readability -->
+        <div class="bg-gradient-to-br from-indigo-900 to-purple-800 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Digital Risk Consultant · EY</h3>
-          <p class="text-sm text-gray-200 mb-2">Jun 2025 – Present · New York, NY</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Jun 2025 – Present · New York, NY</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Implemented a centralized cloud risk &amp; control framework for a $400B financial institution</li>
             <li>Authored contingency plans covering 15+ critical vendor services</li>
             <li>Co‑developed policy &amp; control roadmaps adopted by executive IT leadership</li>
           </ul>
         </div>
 
-        <!-- Resident Assistant -->
-        <div class="bg-gradient-to-br from-purple-700 to-pink-600 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+        <div class="bg-gradient-to-br from-purple-800 to-pink-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Resident Assistant · Fordham University</h3>
-          <p class="text-sm text-gray-200 mb-2">Dec 2024 – Present · Bronx, NY</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Dec 2024 – Present · Bronx, NY</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Planned 20+ community‑building events boosting resident engagement 30%</li>
             <li>Led crisis response &amp; conflict mediation for a 300‑student residence hall</li>
           </ul>
         </div>
 
-        <!-- IT Assistant -->
-        <div class="bg-gradient-to-br from-blue-700 to-cyan-600 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+        <div class="bg-gradient-to-br from-blue-900 to-cyan-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">IT Assistant · Fordham IT Team</h3>
-          <p class="text-sm text-gray-200 mb-2">Aug 2024 – Sep 2024 · New York, NY</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Aug 2024 – Sep 2024 · New York, NY</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Supported 90+ students during move‑in, reducing MFA ticket volume 30%</li>
             <li>Enhanced student tech onboarding with quick‑reference guides &amp; workshops</li>
           </ul>
         </div>
 
-        <!-- Aflac -->
-        <div class="bg-gradient-to-br from-teal-600 to-emerald-500 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+        <div class="bg-gradient-to-br from-teal-800 to-emerald-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Regional Intern · Aflac</h3>
-          <p class="text-sm text-gray-200 mb-2">Jun – Aug 2024 · New York, NY</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Jun – Aug 2024 · New York, NY</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Analyzed SEC filings to identify profitability trends &amp; strategy gaps</li>
             <li>Partnered with 9 SMEs to tailor employee‑benefit solutions</li>
           </ul>
         </div>
 
-        <!-- Summer Leadership Academy Counselor -->
-        <div class="bg-gradient-to-br from-fuchsia-600 to-rose-500 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
-          <h3 class="text-xl font-semibold">Summer Leadership Academy Counselor · Fordham</h3>
-          <p class="text-sm text-gray-200 mb-2">Jun – Aug 2024 · Bronx, NY</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+        <div class="bg-gradient-to-br from-fuchsia-800 to-rose-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
+          <h3 class="text-xl font-semibold">Summer Leadership Academy Counselor · Fordham</h3>
+          <p class="text-sm text-gray-200 mb-3">Jun – Aug 2024 · Bronx, NY</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Guided 40 high‑school scholars through college‑readiness workshops</li>
             <li>Co‑developed leadership modules adopted by the program going forward</li>
           </ul>
         </div>
 
-        <!-- Tutor -->
-        <div class="bg-gradient-to-br from-indigo-600 to-sky-500 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+        <div class="bg-gradient-to-br from-indigo-800 to-sky-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Volunteer Tutor · Jonas Bronck Academy</h3>
-          <p class="text-sm text-gray-200 mb-2">Sep – Dec 2023 · Bronx, NY</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Sep – Dec 2023 · Bronx, NY</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Delivered tailored math &amp; writing lessons improving student GPA by 12%</li>
             <li>Facilitated parent‑teacher communication for individualized support plans</li>
           </ul>
         </div>
 
-        <!-- Corporate Partnership Liaison -->
-        <div class="bg-gradient-to-br from-amber-600 to-yellow-500 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+        <div class="bg-gradient-to-br from-amber-800 to-yellow-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Corporate Partnership Liaison · Entrepreneurship Society</h3>
-          <p class="text-sm text-gray-200 mb-2">Jan 2025 – Present · Fordham</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Jan 2025 – Present · Fordham</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Closed 5 new corporate partnerships &amp; orchestrated 8 industry workshops</li>
             <li>Tracked ROI metrics to align events with society growth goals</li>
           </ul>
         </div>
 
-        <!-- Jagroto -->
-        <div class="bg-gradient-to-br from-red-600 to-orange-500 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+        <div class="bg-gradient-to-br from-red-800 to-orange-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Founder · Jagroto (Non‑Profit)</h3>
-          <p class="text-sm text-gray-200 mb-2">Sep 2020 – Present · Dhaka, Bangladesh</p>
-          <ul class="list-disc list-inside space-y-1 text-sm text-gray-100">
+          <p class="text-sm text-gray-200 mb-3">Sep 2020 – Present · Dhaka, Bangladesh</p>
+          <ul class="list-disc ml-4 space-y-1 text-sm">
             <li>Coordinated disaster‑relief campaigns benefiting 4,000+ families</li>
             <li>Raised $25k+ through digital fundraising &amp; grassroots outreach</li>
           </ul>
@@ -154,38 +161,16 @@
       </div>
     </section>
 
-    <!-- ---------- Resume ---------- -->
+    <!-- Resume Section -->
     <section id="resume" data-aos="fade-up">
-      <h2 class="gradient-title text-3xl font-bold mb-4">Resume</h2>
-      <p class="mb-6">Download a full PDF of my résumé for more details:</p>
-      <a href="resume.pdf" download class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg shadow-lg transform hover:scale-105 transition">
+      <h2 class="gradient-title text-3xl font-bold mb-6">Resume</h2>
+      <p class="mb-6">Download a full PDF of my résumé for complete details:</p>
+      <a href="resume.pdf" download class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 px-7 py-3 rounded-lg shadow-lg hover:scale-105 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9V13a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9.9a.5.5 0 0 0-1 0V13a1 1 0 0 1-1 1H2.5a1 1 0 0 1-1-1V9.9a.5.5 0 0 0-1 0z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3.182-3.182a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L4.872 7.964a.5.5 0 1 0-.708.708l3.482 3.182z"/></svg>
-        Download PDF
+        Resume PDF
       </a>
     </section>
 
-    <!-- ---------- Contact ---------- -->
+    <!-- Contact Section -->
     <section id="contact" data-aos="fade-up">
-      <h2 class="gradient-title text-3xl font-bold mb-4">Contact</h2>
-      <p class="mb-2">Email: <a href="mailto:fhossain16@fordham.edu" class="text-blue-400 hover:underline">fhossain16@fordham.edu</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/fahim-tahmin-hossain/" target="_blank" class="text-blue-400 hover:underline">linkedin.com/in/fahim-tahmin-hossain</a></p>
-    </section>
-  </main>
-
-  <!-- =============================== FOOTER =============================== -->
-  <footer class="text-center py-8 text-gray-500 bg-gray-900">
-    © 2025 Fahim Tahmin Hossain. All rights reserved.
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true,
-      duration: 800,
-      offset: 60, // how far from the top before animation starts
-    });
-  </script>
-</body>
-
-</html>
+      <h2 class
