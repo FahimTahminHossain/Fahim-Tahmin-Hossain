@@ -7,8 +7,8 @@
   <meta name="author" content="Fahim Tahmin Hossain" />
   <title>Fahim Tahmin Hossain</title>
 
-  <!-- Tailwind CSS v3 (with arbitrary values & dark mode utilities) -->
-  <script src="https://cdn.tailwindcss.com/3.4.4"></script>
+  <!-- Tailwind CSS (official CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -21,10 +21,10 @@
       },
     }
   </script>
+
   <!-- AOS for scroll animations -->
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <style>
-    /* Gradient‑text helper */
     .gradient-title {
       background: linear-gradient(90deg, #c084fc 0%, #60a5fa 100%);
       -webkit-background-clip: text;
@@ -35,18 +35,17 @@
 </head>
 
 <body class="dark bg-gray-950 text-gray-100 font-sans scroll-smooth">
-  <!-- ───────────────────────── HEADER / HERO ───────────────────────── -->
+  <!-- HEADER / HERO -->
   <header class="relative overflow-hidden h-[75vh] flex items-center justify-center">
     <!-- Background video -->
     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
       <source src="https://storage.googleapis.com/coverr-main/mp4/Lunar_Rainbows.mp4" type="video/mp4" />
     </video>
-    <!-- Dark overlay for readability -->
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-black/70"></div>
 
-    <!-- Content -->
     <div class="relative z-10 text-center px-4" data-aos="zoom-in">
-      <!-- Profile photo with fallback -->
+      <!-- Profile image (replace with your own) -->
       <img src="assets/images/profile.jpg" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/9919?s=200&v=4'" alt="Fahim Tahmin Hossain" class="w-40 h-40 rounded-full ring-4 ring-purple-500 shadow-xl mx-auto mb-6 animate-slow-bounce" />
 
       <h1 class="gradient-title text-5xl md:text-6xl font-extrabold mb-4">Fahim Tahmin Hossain</h1>
@@ -55,18 +54,18 @@
       <!-- Navigation -->
       <nav class="mt-8">
         <ul class="flex flex-wrap justify-center gap-x-8 gap-y-4 font-medium">
-          <li><a href="#about" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="100">About</a></li>
-          <li><a href="#experience" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="150">Experience</a></li>
-          <li><a href="#resume" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="200">Resume</a></li>
-          <li><a href="#contact" class="hover:text-purple-400 transition" data-aos="fade-down" data-aos-delay="250">Contact</a></li>
+          <li><a href="#about" class="hover:text-purple-400 transition">About</a></li>
+          <li><a href="#experience" class="hover:text-purple-400 transition">Experience</a></li>
+          <li><a href="#resume" class="hover:text-purple-400 transition">Resume</a></li>
+          <li><a href="#contact" class="hover:text-purple-400 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ───────────────────────── MAIN CONTENT ───────────────────────── -->
+  <!-- MAIN -->
   <main class="max-w-5xl mx-auto px-6 py-24 space-y-28">
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" data-aos="fade-up">
       <h2 class="gradient-title text-3xl font-bold mb-6">About Me</h2>
       <div class="grid md:grid-cols-2 gap-8 items-center">
@@ -76,23 +75,22 @@
           helping financial institutions strengthen cloud governance and controls. When I'm not diving into data, you'll find me mentoring peers as a Resident Assistant or
           leading <em>Jagroto</em>—my non‑profit supporting families across Bangladesh.
         </p>
-        <!-- Decorative GIF (AI abstract art) -->
         <img src="https://media.giphy.com/media/Y4pAQv58ETJgRwoLxj/giphy.gif" alt="AI abstract art" class="rounded-lg shadow-lg" />
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience -->
     <section id="experience" data-aos="fade-up">
       <h2 class="gradient-title text-3xl font-bold mb-10">Experience</h2>
       <div class="grid md:grid-cols-2 gap-10">
-        <!-- Card template → darker gradients for readability -->
+        <!-- Card template -->
         <div class="bg-gradient-to-br from-indigo-900 to-purple-800 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Digital Risk Consultant · EY</h3>
           <p class="text-sm text-gray-200 mb-3">Jun 2025 – Present · New York, NY</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Implemented a centralized cloud risk &amp; control framework for a $400B financial institution</li>
-            <li>Authored contingency plans covering 15+ critical vendor services</li>
-            <li>Co‑developed policy &amp; control roadmaps adopted by executive IT leadership</li>
+            <li>Implemented centralized cloud risk &amp; control frameworks</li>
+            <li>Authored contingency plans for 15+ critical vendor services</li>
+            <li>Co‑developed policy &amp; control roadmaps</li>
           </ul>
         </div>
 
@@ -100,8 +98,8 @@
           <h3 class="text-xl font-semibold">Resident Assistant · Fordham University</h3>
           <p class="text-sm text-gray-200 mb-3">Dec 2024 – Present · Bronx, NY</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Planned 20+ community‑building events boosting resident engagement 30%</li>
-            <li>Led crisis response &amp; conflict mediation for a 300‑student residence hall</li>
+            <li>Planned 20+ community events boosting engagement 30%</li>
+            <li>Led crisis response &amp; conflict mediation for 300 residents</li>
           </ul>
         </div>
 
@@ -109,8 +107,8 @@
           <h3 class="text-xl font-semibold">IT Assistant · Fordham IT Team</h3>
           <p class="text-sm text-gray-200 mb-3">Aug 2024 – Sep 2024 · New York, NY</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Supported 90+ students during move‑in, reducing MFA ticket volume 30%</li>
-            <li>Enhanced student tech onboarding with quick‑reference guides &amp; workshops</li>
+            <li>Supported 90+ students during move‑in, reducing MFA tickets 30%</li>
+            <li>Authored quick‑reference tech guides &amp; workshops</li>
           </ul>
         </div>
 
@@ -118,7 +116,7 @@
           <h3 class="text-xl font-semibold">Regional Intern · Aflac</h3>
           <p class="text-sm text-gray-200 mb-3">Jun – Aug 2024 · New York, NY</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Analyzed SEC filings to identify profitability trends &amp; strategy gaps</li>
+            <li>Analyzed SEC filings to identify profitability trends</li>
             <li>Partnered with 9 SMEs to tailor employee‑benefit solutions</li>
           </ul>
         </div>
@@ -127,8 +125,8 @@
           <h3 class="text-xl font-semibold">Summer Leadership Academy Counselor · Fordham</h3>
           <p class="text-sm text-gray-200 mb-3">Jun – Aug 2024 · Bronx, NY</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Guided 40 high‑school scholars through college‑readiness workshops</li>
-            <li>Co‑developed leadership modules adopted by the program going forward</li>
+            <li>Mentored 40 high‑school scholars on college readiness</li>
+            <li>Co‑developed leadership curriculum now adopted annually</li>
           </ul>
         </div>
 
@@ -136,8 +134,8 @@
           <h3 class="text-xl font-semibold">Volunteer Tutor · Jonas Bronck Academy</h3>
           <p class="text-sm text-gray-200 mb-3">Sep – Dec 2023 · Bronx, NY</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Delivered tailored math &amp; writing lessons improving student GPA by 12%</li>
-            <li>Facilitated parent‑teacher communication for individualized support plans</li>
+            <li>Delivered tailored math &amp; writing lessons improving GPA 12%</li>
+            <li>Facilitated parent‑teacher communications</li>
           </ul>
         </div>
 
@@ -145,32 +143,25 @@
           <h3 class="text-xl font-semibold">Corporate Partnership Liaison · Entrepreneurship Society</h3>
           <p class="text-sm text-gray-200 mb-3">Jan 2025 – Present · Fordham</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Closed 5 new corporate partnerships &amp; orchestrated 8 industry workshops</li>
-            <li>Tracked ROI metrics to align events with society growth goals</li>
+            <li>Closed 5 corporate partnerships &amp; ran 8 workshops</li>
+            <li>Measured ROI to align with society growth goals</li>
           </ul>
         </div>
 
         <div class="bg-gradient-to-br from-red-800 to-orange-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition">
           <h3 class="text-xl font-semibold">Founder · Jagroto (Non‑Profit)</h3>
-          <p class="text-sm text-gray-200 mb-3">Sep 2020 – Present · Dhaka, Bangladesh</p>
+          <p class="text-sm text-gray-200 mb-3">Sep 2020 – Present · Dhaka, Bangladesh</p>
           <ul class="list-disc ml-4 space-y-1 text-sm">
-            <li>Coordinated disaster‑relief campaigns benefiting 4,000+ families</li>
-            <li>Raised $25k+ through digital fundraising &amp; grassroots outreach</li>
+            <li>Coordinated disaster‑relief benefiting 4,000+ families</li>
+            <li>Raised $25k+ through digital fundraising</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Resume Section -->
+    <!-- Resume -->
     <section id="resume" data-aos="fade-up">
       <h2 class="gradient-title text-3xl font-bold mb-6">Resume</h2>
       <p class="mb-6">Download a full PDF of my résumé for complete details:</p>
       <a href="resume.pdf" download class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 px-7 py-3 rounded-lg shadow-lg hover:scale-105 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9V13a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9.9a.5.5 0 0 0-1 0V13a1 1 0 0 1-1 1H2.5a1 1 0 0 1-1-1V9.9a.5.5 0 0 0-1 0z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3.182-3.182a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L4.872 7.964a.5.5 0 1 0-.708.708l3.482 3.182z"/></svg>
-        Resume PDF
-      </a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" data-aos="fade-up">
-      <h2 class
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9V13a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9.9a.5.5 0 0 0-1 0V13a1 1 0 0 1-1 1H2.5a1 1 0 0 1-1-1V9.9a.5.5 0 0 0-1 0z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3.182-3.182a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L4.872 7.964a.5.5 0 1 0-.708.708l
